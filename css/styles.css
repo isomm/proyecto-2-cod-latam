@@ -1,0 +1,277 @@
+/* Font */
+
+/* Fonts */
+/* Importar aquí la font */
+/*Estilos Generales */
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: #9aa776;
+    color: #000;
+    }
+    body.cambio-fuente {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f67fe0;
+    }
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    height: 90px;
+    width: 100%;
+    background-color: #f4f67fe0;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 3px 10px -5px #f0278f;
+}
+main{
+    max-width: 1200px;
+    margin: auto;
+}
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+li{
+    list-style: none;
+    display: flex;
+}
+ /* Para que los enlaces hereden el color de texto y no tengan subrayado */
+ul#menu {
+    display: flex;
+    font-size: 20px;
+}
+  
+#menu-btn {
+background: transparent;
+border: o;
+outline: 0;
+font-size: 26px;
+width: 40px;
+height: 40px;
+}
+i#close-menu {
+    display: none;
+}
+nav {
+display: none;
+}
+body.mobile-menu-active {
+   overflow: hidden; 
+   }
+body.mobile-menu-active i#close-menu {
+    display: block;
+}
+
+body.mobile-menu-active i#open-menu {
+    display: none;
+}
+body.mobile-menu-active header{
+   height:30vh ; 
+   flex-wrap: wrap;
+   align-items: flex-start;
+   transition: height 0.3s;
+}
+body.mobile-menu-active nav{
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+body.mobile-menu-active ul#menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+li.menu-item {
+    padding: 16px;
+    display: inline-block;
+}
+   li.menu-item:hover {
+    background-color:#617712;
+    color: #fbfbfb;
+    transition: background-color 0.3s;
+   }    
+li.menu-item:hover
+li.menu-item a,active,
+a.btn :hover{
+    background: rgba(45, 2, 36, 0.5);
+    transition: background-color 0,3s;
+    color: aliceblue;
+
+}
+
+.logo{
+    width: 120px;
+     border-radius: 2px; 
+}
+/*section inicio*/
+section#inicio{
+    justify-content: space-around;
+}
+section#contact ul{
+ display: flex ;  
+ 
+}
+a {    
+    text-decoration: none;
+    color: inherit;
+}
+p{
+    margin: 16px 0;
+}
+
+h1{
+    font-size: 36px;
+    text-align: center;
+}
+h2{
+    font-size: 28px;
+    text-align: center;
+}
+
+
+article.hola{
+    background: #b7c65b;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20%;
+           
+}
+a.btn{
+    background-color: #38450d;
+    color: #fbfbfb;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 20px;
+}
+a.btn:hover{
+    transition:background-color 0.3s;   
+}
+section{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 16px;
+min-height: 100vh;
+padding-top: 120px;
+}
+/*seccion Contacto */
+section#contacto {
+    text-align: center;
+    min-height: 100vh;
+}
+
+article.presentacion{
+    width: 100%;
+    text-align: center;
+    
+}
+
+article.hablemos{
+    background: #a05971;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20;
+    color: #363619;
+}
+
+/*seccion contactlinks */
+section#contactlinks{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px; 
+  padding-top: 10px;
+  list-style-type: none;
+}
+.imgRedonda{
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+}
+.menu-itemactive{
+    background: rgba(136, 66, 41, 0.5);
+}
+ul#contac-links{
+    display: flex;
+    margin-top: 28px;
+}
+ul#contac-links li{
+    margin: 16px;
+    padding: 8px;
+    border-radius: 44px;
+} 
+footer{
+    background: #c9f552;
+    height: 90px;
+    font-size: 25px;
+    color: #e11797;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.person{
+    text-align: center;
+    position: fixed;
+}
+@media {min: width 1024px; ;
+    section#inicio{
+    flex-direction: row;    
+    }
+    article.presentacion{
+        text-align: left;
+        width: 50%;
+    }
+    h1 {
+    font-size: 48px;
+    text-align: left;
+    }
+}
+    
+/* Para quitar los puntos a los items de listas */
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
